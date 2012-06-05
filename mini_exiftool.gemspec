@@ -2,7 +2,7 @@
 
 Gem::Specification.new do |s|
   s.name = "mini_exiftool"
-  s.version = "1.5.1ak"
+  s.version = "1.5.1"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 1.2") if s.respond_to? :required_rubygems_version=
   s.authors = ["Jan Friedrich"]
