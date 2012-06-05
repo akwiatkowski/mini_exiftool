@@ -273,7 +273,14 @@ class MiniExiftool
   @@error_file = Tempfile.new 'errors'
   @@error_file.close
 
-  if Float(exiftool_version) < 7.41
+  # quick fix - when exiftool command is not installed and not used
+  begin
+    @@exiftool_version = exiftool_version
+  rescue
+    @@exiftool_version = '-1.0'
+  end
+
+  if Float(@@exiftool_version) < 7.41
     @@separator = ', '
     @@sep_op = ''
   else
